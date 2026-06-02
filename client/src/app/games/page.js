@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 
-const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
 
 const GAMES = [
   { id: 'dice',         name: 'DICE',         emoji: '🎲', desc: 'Predict over/under numbers', color: '#00f2ff', tag: 'CLASSIC',   image: 'https://images.unsplash.com/photo-1596838132731-3301c3fd4317?auto=format&fit=crop&q=80&w=800' },
@@ -82,7 +82,7 @@ export default function GamesHubPage() {
         <header className="hub-header-v3">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="hub-title-container">
             <span className="hub-badge">ORIGINALS</span>
-            <h1>PRISMATIQUE <span className="blue-glow">GAMES</span></h1>
+            <h1>MIARUSH <span className="blue-glow">GAMES</span></h1>
             <p>Experience our premium suite of provably fair arcade games.</p>
           </motion.div>
         </header>

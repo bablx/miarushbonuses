@@ -10,7 +10,7 @@ import DragonTowerGame from '@/components/games/DragonTowerGame';
 import ChickenGame from '@/components/games/ChickenGame';
 import KenoGame from '@/components/games/KenoGame';
 
-const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
 
 const GAMES_META = {
   dice:         { name: 'DICE',         emoji: '🎲', component: DiceGame,        color: '#00f2ff', tag: 'CLASSIC' },

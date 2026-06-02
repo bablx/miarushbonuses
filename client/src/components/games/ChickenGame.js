@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 
-const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
 
 export default function ChickenGame({ user, onCoinsUpdate }) {
   const [betAmount, setBetAmount] = useState(10);

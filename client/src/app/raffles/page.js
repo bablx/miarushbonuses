@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { toast } from 'react-toastify';
 import Navbar from '@/components/Navbar';
 
-const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
 
 export default function RafflesPage() {
   const [user, setUser] = useState(null);
@@ -151,7 +151,7 @@ export default function RafflesPage() {
       
       <footer>
         <div className="container">
-          <p>&copy; 2024 PRISMATIQUE. ALL RIGHTS RESERVED.</p>
+          <p>&copy; 2024 MIARUSH. ALL RIGHTS RESERVED.</p>
         </div>
       </footer>
     </main>

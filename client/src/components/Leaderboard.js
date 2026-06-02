@@ -17,7 +17,7 @@ export default function Leaderboard() {
 
   const fetchLeaderboard = async () => {
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
       const res = await fetch(`${apiUrl}/leaderboard`);
       if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
       const result = await res.json();
@@ -175,7 +175,7 @@ export default function Leaderboard() {
               >
                 <div className="row-rank">{index + 4}</div>
                 <div className="row-user">
-                  <div className="row-avatar">👤</div>
+                  <img src="/lb.png" alt="User" className="row-avatar" />
                   <div className="row-name-group">
                     <div className="row-name">{player.username}</div>
                     <div className="row-badges">{player.badges?.map((b, i) => <span key={i}>{b}</span>)}</div>

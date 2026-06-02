@@ -4,7 +4,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import AdminDashboard from './AdminDashboard';
 
-const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
 
 export default function AdminPortal() {
   const [showLogin, setShowLogin] = useState(false);
@@ -16,8 +16,8 @@ export default function AdminPortal() {
 
   useEffect(() => {
     const handleKeyDown = (e) => {
-      // Shift + Ctrl + A
-      if (e.shiftKey && (e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'a') {
+      // Shift + Alt + A
+      if (e.shiftKey && e.altKey && e.key.toLowerCase() === 'a') {
         e.preventDefault();
         const savedToken = localStorage.getItem('prism_admin_token');
         if (savedToken) {
@@ -87,7 +87,7 @@ export default function AdminPortal() {
               type="email" 
               value={email} 
               onChange={(e) => setEmail(e.target.value)} 
-              placeholder="admin@prismatique.com"
+              placeholder="miarush@gmail.com"
               required 
             />
           </div>
@@ -97,7 +97,7 @@ export default function AdminPortal() {
               type="password" 
               value={password} 
               onChange={(e) => setPassword(e.target.value)} 
-              placeholder="••••••••"
+              placeholder="********"
               required 
             />
           </div>

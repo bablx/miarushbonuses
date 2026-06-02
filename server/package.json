@@ -1,7 +1,7 @@
 {
-  "name": "prismatique-server",
+  "name": "miarush-server",
   "version": "1.0.0",
-  "description": "Backend for Prismatique Leaderboard",
+  "description": "Backend for MIARUSH Leaderboard",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",

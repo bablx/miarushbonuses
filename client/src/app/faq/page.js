@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import FAQ from '@/components/FAQ';
 
-const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
 
 export default function FAQPage() {
   const [user, setUser] = useState(null);
@@ -68,7 +68,7 @@ export default function FAQPage() {
             className="text-center mb-8"
           >
             <h1 className="section-title">FREQUENTLY ASKED <span className="highlight-blue">QUESTIONS</span></h1>
-            <p className="page-subtitle">Everything you need to know about Prismatique.</p>
+            <p className="page-subtitle">Everything you need to know about MIARUSH.</p>
           </motion.div>
 
           <FAQ />
@@ -77,7 +77,7 @@ export default function FAQPage() {
       
       <footer>
         <div className="container">
-          <p>&copy; 2024 PRISMATIQUE. ALL RIGHTS RESERVED.</p>
+          <p>&copy; 2024 MIARUSH. ALL RIGHTS RESERVED.</p>
         </div>
       </footer>
     </main>

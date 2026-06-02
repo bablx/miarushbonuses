@@ -19,7 +19,7 @@ const GameSession = require('./models/GameSession');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/prismatique';
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/miarush';
 
 // VERSION CHECK - If you see this in logs, latest code is deployed
 console.log('🚀 SERVER VERSION: CORS-FIX-V4 - origin:true');
@@ -46,8 +46,8 @@ const allowedOrigins = [
   'http://localhost:3000',
   'http://127.0.0.1:3000',
   process.env.CLIENT_URL,
-  'https://prismatiquebonuses.com',
-  'https://www.prismatiquebonuses.com'
+  'https://miarushbonuses.com',
+  'https://www.miarushbonuses.com'
 ].filter(Boolean).map(url => url.replace(/\/$/, "")); // Remove trailing slashes
 
 app.use(cors({
@@ -1400,13 +1400,13 @@ const server = app.listen(PORT, '0.0.0.0', () => {
   console.log(`📡 Internal IP: http://127.0.0.1:${PORT}`);
   
   setTimeout(() => {
-    console.log('📡 Prefetching Prismatique stream info...');
-    if (activeFetches.has('prismatique')) return;
-    activeFetches.add('prismatique');
+    console.log('📡 Prefetching MIARUSH stream info...');
+    if (activeFetches.has('miarush')) return;
+    activeFetches.add('miarush');
     
-    pQueue.add(() => fetchKickDataViaPuppeteer('prismatique')).then(data => {
+    pQueue.add(() => fetchKickDataViaPuppeteer('miarush')).then(data => {
       if (data) {
-        streamInfoCache.set('prismatique', { 
+        streamInfoCache.set('miarush', { 
           timestamp: Date.now(), 
           data: { exists: true, ...data } 
         });
@@ -1417,7 +1417,7 @@ const server = app.listen(PORT, '0.0.0.0', () => {
     }).catch(err => {
       console.log('⚠️ Prefetch error:', err.message);
     }).finally(() => {
-      activeFetches.delete('prismatique');
+      activeFetches.delete('miarush');
     });
   }, 10000);
 });

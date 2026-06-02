@@ -369,7 +369,7 @@ body {
 
 .row-rank { font-size: 1.3rem; font-weight: 900; color: var(--text-secondary); }
 .row-user { display: flex; align-items: center; gap: 15px; }
-.row-avatar { font-size: 1.5rem; }
+.row-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
 .row-name { font-size: 1.1rem; font-weight: 800; }
 
 .small-label {
@@ -455,7 +455,7 @@ footer { padding: 80px 0; text-align: center; border-top: 1px solid rgba(255, 25
   transform: translateX(-50%);
   width: 90%;
   max-width: 1200px;
-  height: 70px;
+  height: 100px;
   background: rgba(17, 20, 27, 0.8);
   backdrop-filter: blur(15px);
   border: 1px solid rgba(0, 242, 255, 0.15);

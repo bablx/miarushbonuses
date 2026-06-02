@@ -26,7 +26,7 @@ export default function Navbar({ user, onLogout, onLoginClick, coins }) {
       <nav className="nav-container container">
         <div className="nav-brand">
           <Link href="/">
-            <img src="/pris.png" alt="Prismatique" className="nav-logo-float" />
+            <img src="/mia.png" alt="MIARUSH" className="nav-logo-float" />
           </Link>
         </div>
         

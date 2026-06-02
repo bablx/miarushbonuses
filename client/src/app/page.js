@@ -10,7 +10,7 @@ import FAQ from '@/components/FAQ';
 import Leaderboard from '@/components/Leaderboard';
 import CoinWallet from '@/components/CoinWallet';
 
-const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
 const STORAGE_KEY = 'prism_auth_v2';
 
 export default function Home() {
@@ -93,7 +93,7 @@ export default function Home() {
 
   const fetchStreamInfo = async () => {
     try {
-      const response = await fetch(`${API}/kick/stream-info/prismatique`);
+      const response = await fetch(`${API}/kick/stream-info/miarush`);
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
       const result = await response.json();
       if (result.success) {
@@ -237,7 +237,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            WELCOME TO <br /> <span className="highlight-blue">PRISMATIQUE BONUSES</span>
+            WELCOME TO <br /> <span className="highlight-blue">MIARUSH BONUSES</span>
           </motion.h1>
           <p className="hero-description">
             Discover premium casinos with unbeatable welcome rewards and guaranteed instant withdrawals.
@@ -263,7 +263,7 @@ export default function Home() {
               <div className="stream-container">
                 {streamInfo.isLive && <div className="live-badge-pulsing">LIVE</div>}
                 <iframe 
-                  src="https://player.kick.com/prismatique" 
+                  src="https://player.kick.com/miarush" 
                   width="100%" 
                   height="100%" 
                   frameBorder="0" 
@@ -275,16 +275,16 @@ export default function Home() {
             <div className="stream-sidebar">
               <div className="streamer-card">
                 <div className="streamer-header">
-                  <img src="/pris.png" alt="Prismatique" className="streamer-avatar" />
+                  <img src="/mia.png" alt="MIARUSH" className="streamer-avatar" />
                   <div className="streamer-info">
-                    <h3>PRISMATIQUE</h3>
+                    <h3>MIARUSH</h3>
                     <span className={`status-badge ${streamInfo.isLive ? 'online' : 'offline'}`}>
                       {streamInfo.isLive ? 'ONLINE' : 'OFFLINE'}
                     </span>
                   </div>
                 </div>
                 <div className="stream-actions">
-                  <a href="https://kick.com/prismatique" target="_blank" rel="noopener noreferrer" className="stream-btn primary">
+                  <a href="https://kick.com/miarush" target="_blank" rel="noopener noreferrer" className="stream-btn primary">
                     <i className="fab fa-kickstarter"></i> WATCH ON KICK
                   </a>
                 </div>
@@ -409,38 +409,25 @@ export default function Home() {
         <div className="container">
           <div className="section-header-centered">
             <h2 className="section-title">EXCLUSIVE <span className="highlight-blue">BONUSES</span></h2>
-            <p className="section-subtitle">Premium deals hand-picked for the Prismatique community.</p>
+            <p className="section-subtitle">Premium deals hand-picked for the MIARUSH community.</p>
           </div>
           
           <div className="rainbet-highlight-card">
             <div className="rainbet-content">
               <div className="rainbet-badge pulse-badge">🔥 HOTTEST DEAL</div>
-              <h3 className="rainbet-title">RAINBET</h3>
+              <h3 className="rainbet-title">MEGA DICE</h3>
               <p className="rainbet-desc">High-stakes crypto casino with instant withdrawals and elite rewards. Experience the most trusted platform in the industry.</p>
               <div className="rainbet-features">
                 <span><i className="fas fa-bolt"></i> Instant Payout</span>
                 <span><i className="fas fa-crown"></i> VIP Rewards</span>
                 <span><i className="fas fa-coins"></i> High RTP</span>
               </div>
-              <a href="https://rainbet.com/?r=pris" target="_blank" rel="noopener noreferrer" className="rainbet-btn">
+              <a href="https://casii.no/MiaRush" target="_blank" rel="noopener noreferrer" className="rainbet-btn">
                 CLAIM EXCLUSIVE BONUS <i className="fas fa-arrow-right"></i>
               </a>
             </div>
             <div className="rainbet-visual">
-              <div className="rainbet-logo">RAINBET</div>
-            </div>
-          </div>
-
-          <div className="other-bonuses-grid">
-            <div className="bonus-mini-card">
-              <h4>96.COM</h4>
-              <p>Asian gaming platform with massive game selection.</p>
-              <a href="https://96game.fun/?channel_id=600061400&ma_token=JS-1JyHcMKeB54jpFC4tkWNd7ZgqdRLk&geo=IN" target="_blank" rel="noopener noreferrer" className="bonus-mini-btn">VISIT</a>
-            </div>
-            <div className="bonus-mini-card">
-              <h4>WHALE.IO</h4>
-              <p>Exclusive platform with high-stakes bonuses.</p>
-              <a href="https://whalegames.gg/?tf_clickid=WIO019d548d4f8f7e29bfbb245d459ed259&pubid=432&offer_name=150_cpa_30_rs" target="_blank" rel="noopener noreferrer" className="bonus-mini-btn">VISIT</a>
+              <div className="rainbet-logo">MEGA DICE</div>
             </div>
           </div>
 
@@ -461,7 +448,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               className="section-title"
             >
-              PRISMATIQUE <span className="highlight-blue">ORIGINALS</span>
+              MIARUSH <span className="highlight-blue">ORIGINALS</span>
             </motion.h2>
             <p className="section-subtitle">Experience the next generation of provably fair gaming.</p>
             <div className="preview-wallet-wrapper">
@@ -537,7 +524,7 @@ export default function Home() {
 
       <footer>
         <div className="container">
-          <p>&copy; 2024 PRISMATIQUE. ALL RIGHTS RESERVED.</p>
+          <p>&copy; 2024 MIARUSH. ALL RIGHTS RESERVED.</p>
         </div>
       </footer>
 

@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 
-const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
 
 export default function DiceGame({ user, onCoinsUpdate }) {
   const [target, setTarget]       = useState(50);

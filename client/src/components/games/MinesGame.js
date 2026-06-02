@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { toast } from 'react-toastify';
 
-const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
 const GRID_SIZE = 25;
 
 export default function MinesGame({ user, onCoinsUpdate }) {

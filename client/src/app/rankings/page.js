@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
 import Leaderboard from '@/components/Leaderboard';
 
-const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
 
 export default function RankingsPage() {
   const [user, setUser] = useState(null);
@@ -68,7 +68,7 @@ export default function RankingsPage() {
             className="text-center mb-8"
           >
             <h1 className="section-title">GLOBAL <span className="highlight-blue">RANKINGS</span></h1>
-            <p className="page-subtitle">The top players in the Prismatique ecosystem.</p>
+            <p className="page-subtitle">The top players in the MIARUSH ecosystem.</p>
           </motion.div>
 
           <Leaderboard />
@@ -77,7 +77,7 @@ export default function RankingsPage() {
       
       <footer>
         <div className="container">
-          <p>&copy; 2024 PRISMATIQUE. ALL RIGHTS RESERVED.</p>
+          <p>&copy; 2024 MIARUSH. ALL RIGHTS RESERVED.</p>
         </div>
       </footer>
     </main>

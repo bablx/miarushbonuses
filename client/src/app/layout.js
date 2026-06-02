@@ -1,11 +1,11 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Prismatique | Premium Gaming Portal",
+  title: "MIARUSH BONUSES | Premium Gaming Portal",
   description: "The ultimate destination for premium gaming, rewards, and premium casino bonuses.",
   icons: {
-    icon: "/pris.png",
-    apple: "/pris.png",
+    icon: "/mia.png",
+    apple: "/mia.png",
   }
 };
 

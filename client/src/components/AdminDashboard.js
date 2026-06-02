@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001/api';
 
 const ConfirmDelete = ({ onConfirm, onCancel, type }) => (
   <div className="confirm-toast">
@@ -126,7 +126,7 @@ export default function AdminDashboard({ onLogout }) {
       <div className="admin-dashboard-container glass-panel">
         <aside className="admin-sidebar">
           <div className="admin-logo">
-            <img src="/pris.png" alt="Admin" />
+            <img src="/mia.png" alt="Admin" />
             <span>ADMIN PANEL</span>
           </div>
           <nav className="admin-nav">
